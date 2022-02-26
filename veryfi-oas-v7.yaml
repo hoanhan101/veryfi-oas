@@ -56,7 +56,7 @@ paths:
           description: |
             Search for documents with a created date greater than the one specified here.
             The date format for this parameter is: YYYY-MM-DD+HH:MM:SS
-            Don't send both created__gt and created__gte in a single request.
+            Don't send both `created__gt` and `created__gte` in a single request.
           required: false
           style: form
           explode: true
@@ -68,7 +68,7 @@ paths:
           description: |
             Search for documents with a created date greater than or equal to the one specified here.
             The date format for this parameter is: YYYY-MM-DD+HH:MM:SS
-            Don't send both created__gt and created__gte in a single request.
+            Don't send both `created__gt` and `created__gte` in a single request.
           required: false
           style: form
           explode: true
@@ -80,7 +80,7 @@ paths:
           description: |
             Search for documents with a created date less than the one specified here.
             The date format for this parameter is: YYYY-MM-DD+HH:MM:SS
-            Don't send both created__lt and created__lte in a single request.
+            Don't send both `created__lt` and `created__lte` in a single request.
           required: false
           style: form
           explode: true
@@ -92,7 +92,7 @@ paths:
           description: |
             Search for documents with a created date less than or equal to the one specified here.
             The date format for this parameter is: YYYY-MM-DD+HH:MM:SS
-            Don't send both created__lt and created__lte in a single request.
+            Don't send both `created__lt` and `created__lte` in a single request.
           required: false
           style: form
           explode: true
