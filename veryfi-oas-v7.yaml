@@ -9,7 +9,7 @@ info:
   license:
     name: MIT
     url: https://raw.githubusercontent.com/veryfi/veryfi-python/master/LICENSE
-  version: 7.0.0
+  version: v7
 servers:
   - url: https://api.veryfi.com/api/v7/partner
 security:
