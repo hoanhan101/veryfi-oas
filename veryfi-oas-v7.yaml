@@ -635,30 +635,26 @@ components:
           format: double
           example: 2.22
     LineItem:
-      required:
-        - id
       type: object
       properties:
-        id:
-          type: integer
-          format: int64
-          example: 75788890
         date:
           type: string
           example: ""
         description:
           type: string
-          example: 98 Meat Pty Xchz
+          example: "98 Meat Pty Xchz"
         discount:
           type: number
           format: double
-          example: 0
-        end_date:
-          type: string
-          example: ""
-        hsn:
-          type: string
-          example: ""
+          example: 0.0
+        discount_rate:
+          type: number
+          format: double
+          example: 0.0
+        id:
+          type: integer
+          format: int64
+          example: 75788890
         order:
           type: integer
           example: 1
@@ -679,13 +675,6 @@ components:
         sku:
           type: string
           example: "038902058959"
-        start_date:
-          type: string
-          example: ""
-        tags:
-          type: array
-          items:
-            $ref: "#/components/schemas/Tag"
         tax:
           type: number
           format: double
@@ -694,6 +683,9 @@ components:
           type: number
           format: double
           example: 7.66
+        text:
+          type: string
+          example: "GINGER CARROT SOUP"
         total:
           type: number
           format: double
@@ -705,26 +697,20 @@ components:
           type: string
           example: ""
     Document:
-      required:
-        - id
       type: object
       properties:
-        id:
-          type: integer
-          format: int64
-          example: 38947300
         abn_number:
           type: string
           example: ""
         account_number:
           type: string
-          example: ""
+          example: "WWW0N98281"
         bill_to_address:
           type: string
-          example: 2 Court Square\nNew York, NY 12210
+          example: "2 Court Square\nNew York, NY 12210"
         bill_to_name:
           type: string
-          example: John Smith
+          example: "John Smith"
         bill_to_vat_number:
           type: string
           example: ""
@@ -737,16 +723,16 @@ components:
           example: 7.66
         category:
           type: string
-          example: Meals & Entertainment
+          example: "Meals & Entertainment"
         created:
           type: string
-          example: 2021-08-05 17:24:48
+          example: "2021-08-05 17:24:48"
         currency_code:
           type: string
-          example: USD
+          example: "USD"
         date:
           type: string
-          example: 2021-08-05 10:24:48
+          example: "2021-08-05 10:24:48"
         delivery_date:
           type: string
           example: ""
@@ -762,10 +748,10 @@ components:
           example: INVOICE
         document_type:
           type: string
-          example: invoice
+          example: "invoice"
         due_date:
           type: string
-          example: 2019-02-26
+          example: ""
         duplicate_of:
           type: integer
           format: int64
@@ -774,24 +760,27 @@ components:
         external_id:
           type: string
           example: ""
+        id:
+          type: integer
+          example: ""
         img_file_name:
           type: string
-          example: 8247b18a-41f0-443c-bbf4-10814385e097.pdf
+          example: "8247b18a-41f0-443c-bbf4-10814385e097.pdf"
         img_thumbnail_url:
           type: string
-          example: https://scdn.veryfi.com/receipts/470e7ab9-3084-4d05-b840-885383a2c22e/thumbnail.jpg?Expires=1628185188&Signature=cnyZCF~GnF2TkizYWObnGuNDhmkCsRl5-XoVymoalJFjJCrQKmq7RbpS6RCUnt60aVlPiT1uJeQJXG4eyZOg~FfJc5-ieC0gkqAFhh9vCRjzph15niTfq0mKg23nOu3YR8BJcWBfPfEL8k3FEqFERsvUBNddvfCkfx9JoMlq9ATNBQLxkK4lJPF4vMcFpkiCStOEt0MDJM80NbgPAqZEAQuDzygaiy8owaGiOVIj0h0ZMzLHNPzf5flGYqK6D2LvGRZlEIESavULk1Eug7tuG1DiqxTaDDxDbBGUCDb9ZIaKQAsPXzoEHUExB3J61q-B5KTFJSNch1okMe6sT9fzpQ__&Key-Pair-Id=APKAJCILBXEJFZF4DCHQ
+          example: "https://scdn.veryfi.com/receipts/470e7ab9-3084-4d05-b840-885383a2c22e/thumbnail.jpg?Expires=1628185188&Signature=cnyZCF~GnF2TkizYWObnGuNDhmkCsRl5-XoVymoalJFjJCrQKmq7RbpS6RCUnt60aVlPiT1uJeQJXG4eyZOg~FfJc5-ieC0gkqAFhh9vCRjzph15niTfq0mKg23nOu3YR8BJcWBfPfEL8k3FEqFERsvUBNddvfCkfx9JoMlq9ATNBQLxkK4lJPF4vMcFpkiCStOEt0MDJM80NbgPAqZEAQuDzygaiy8owaGiOVIj0h0ZMzLHNPzf5flGYqK6D2LvGRZlEIESavULk1Eug7tuG1DiqxTaDDxDbBGUCDb9ZIaKQAsPXzoEHUExB3J61q-B5KTFJSNch1okMe6sT9fzpQ__&Key-Pair-Id=APKAJCILBXEJFZF4DCHQ"
         img_url:
           type: string
-          example: https://scdn.veryfi.com/receipts/470e7ab9-3084-4d05-b840-885383a2c22e/8247b18a-41f0-443c-bbf4-10814385e097.pdf?Expires=1628185188&Signature=OAaTOHH3KQYlj9pPA0fO50VjQSC8hnJJVvyJZwiGbK-wLw76UF5tWm0XtD5Htp2xx0vXbqJINIT7joyLA1dik01qDprgUbuXfcGamPUgJ6xcLOBKBF855bpFepK0Jdr-x9aGnx4EER7Z~CxUgvrv99cuFGuMab2s9gr0DwXHgLTCzVMZ2dOhbbvR8Yw8ADddzoOSPkwc~3PBB6AGla8cTQmSO0EWlq87rPaXWRrOnqnHwv5RqLWzVpODWVLeBYYudE2ZlaO~U7ftHzc0llKl3kffn4hElaDd5a7VoN0V9yKrGa1cCgRyYmFy9qtGsn3XPZutgnnzkB-~p6y0CUr7Zg__&Key-Pair-Id=APKAJCILBXEJFZF4DCHQ
+          example: "https://scdn.veryfi.com/receipts/470e7ab9-3084-4d05-b840-885383a2c22e/8247b18a-41f0-443c-bbf4-10814385e097.pdf?Expires=1628185188&Signature=OAaTOHH3KQYlj9pPA0fO50VjQSC8hnJJVvyJZwiGbK-wLw76UF5tWm0XtD5Htp2xx0vXbqJINIT7joyLA1dik01qDprgUbuXfcGamPUgJ6xcLOBKBF855bpFepK0Jdr-x9aGnx4EER7Z~CxUgvrv99cuFGuMab2s9gr0DwXHgLTCzVMZ2dOhbbvR8Yw8ADddzoOSPkwc~3PBB6AGla8cTQmSO0EWlq87rPaXWRrOnqnHwv5RqLWzVpODWVLeBYYudE2ZlaO~U7ftHzc0llKl3kffn4hElaDd5a7VoN0V9yKrGa1cCgRyYmFy9qtGsn3XPZutgnnzkB-~p6y0CUr7Zg__&Key-Pair-Id=APKAJCILBXEJFZF4DCHQ"
         insurance:
-          type: string
-          example: ""
+          type: double
+          example: 0.0
         invoice_number:
           type: string
-          example: "98"
+          example: ""
         is_duplicate:
           type: integer
-          example: 1
+          example: 0
         line_items:
           type: array
           items:
@@ -807,23 +796,23 @@ components:
           example: ""
         payment_display_name:
           type: string
-          example: Cash
+          example: "Visa"
         payment_terms:
           type: string
-          example: 15 days
+          example: "15 days"
         payment_type:
           type: string
-          example: cash
+          example: "visa"
         phone_number:
           type: string
-          example: 165 1 5 98
+          example: "61784074851"
         purchase_order_number:
           type: string
-          example: 2312/2019
+          example: "2312/2019"
         rounding:
           type: number
           format: double
-          example: 0
+          example: 0.0
         service_end_date:
           type: string
           example: ""
@@ -835,14 +824,14 @@ components:
           example: ""
         ship_to_address:
           type: string
-          example: 3787 Pineview Drive\nCambridge, MA 12210
+          example: "3787 Pineview Drive\nCambridge, MA 12210"
         ship_to_name:
           type: string
-          example: John Smith
+          example: "John Smith"
         shipping:
           type: number
           format: double
-          example: 0
+          example: 0.0
         store_number:
           type: string
           example: ""
@@ -874,7 +863,7 @@ components:
           example: ""
         updated:
           type: string
-          example: 2021-08-05 17:24:48
+          example: "2021-08-05 17:24:48"
         vat_number:
           type: string
           example: ""
@@ -895,10 +884,6 @@ components:
         vendor_iban:
           type: string
           example: ""
-        warnings:
-          type: array
-          items:
-            $ref: "#/components/schemas/OperationStatus"
     DocumentUploadOptions:
       type: object
       properties:
@@ -1004,10 +989,10 @@ components:
       properties:
         address:
           type: string
-          example: 1912 Harvest Lane\nNew York, NY 12210
+          example: "1912 Harvest Lane\nNew York, NY 12210"
         category:
           type: string
-          example: Fast Food
+          example: "Fast Food"
         email:
           type: string
           example: ""
@@ -1016,22 +1001,22 @@ components:
           example: ""
         name:
           type: string
-          example: In-n-out Burger
+          example: "In-n-out Burger"
         phone_number:
           type: string
-          example: 165 1 5 98
+          example: "165 1 5 98"
         raw_name:
           type: string
-          example: In-N-Out Burger
+          example: "In-N-Out Burger"
         vendor_logo:
           type: string
-          example: https://cdn.veryfi.com/logos/us/949103001.png
+          example: "https://cdn.veryfi.com/logos/us/949103001.png"
         vendor_reg_number:
           type: string
           example: ""
         vendor_type:
           type: string
-          example: Fast Food
+          example: "Fast Food"
         web:
           type: string
           example: ""
