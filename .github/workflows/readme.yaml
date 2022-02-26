@@ -1,0 +1,16 @@
+name: Sync OAS to ReadMe
+on:
+  push:
+    branches:
+      - master
+      - main
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: readmeio/github-readme-sync@v2
+        with:
+          readme-oas-key: c404We4ear44J0c1JHDfHjxui9d6Na3Q:621a95210b7360318c10ba30
+          oas-file-path: './veryfi-oas-v7.yaml'
+          api-version: 'v7.0.0'
