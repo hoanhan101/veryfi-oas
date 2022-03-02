@@ -136,6 +136,32 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/OperationStatus"
+    post:
+      tags:
+        - documents
+      summary: Process a Document (File Upload).
+      description: |
+        Process a document and extract all the fields from it.
+      operationId: processDocument
+      requestBody:
+        content:
+          application/octet-stream:
+            schema:
+              type: string
+              format: binary
+      responses:
+        "201":
+          description: Document.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Document"
+        default:
+          description: OperationStatus.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/OperationStatus"
   /documents/{document_id}:
     get:
       tags:
