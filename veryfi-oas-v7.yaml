@@ -136,6 +136,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/OperationStatus"
+  //documents:
     post:
       tags:
         - documents
