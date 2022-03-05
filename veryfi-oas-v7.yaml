@@ -17,11 +17,11 @@ security:
     Authorization: []
 tags:
   - name: documents
-    description: Operations with documents.
+    description: Process and manage documents.
   - name: line-items
-    description: Operations with line items.
+    description: Process and manage line items.
   - name: tags
-    description: Operations with tags.
+    description: Process and manage tags.
 paths:
   /documents:
     get:
