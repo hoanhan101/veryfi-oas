@@ -623,16 +623,16 @@ components:
     TaxLine:
       type: object
       properties:
-        name:
-          type: string
-          example: SALES
-        order:
-          type: integer
-          example: 0
         base:
           type: number
           format: double
           example: 1.11
+        name:
+          type: string
+          example: "SALES"
+        order:
+          type: integer
+          example: 0
         rate:
           type: number
           format: double
@@ -711,7 +711,7 @@ components:
           example: ""
         account_number:
           type: string
-          example: "WWW0N98281"
+          example: ""
         bill_to_address:
           type: string
           example: "2 Court Square\nNew York, NY 12210"
@@ -760,10 +760,8 @@ components:
           type: string
           example: ""
         duplicate_of:
-          type: integer
-          format: int64
-          nullable: true
-          example: 38995348
+          type: string
+          example: ""
         external_id:
           type: string
           example: ""
@@ -875,7 +873,7 @@ components:
           type: string
           example: ""
         vendor:
-          $ref: "#/components/schemas/Document_vendor"
+          $ref: "#/components/schemas/DocumentVendor"
         vendor_account_number:
           type: string
           example: ""
@@ -991,7 +989,7 @@ components:
           type: array
           items:
             $ref: "#/components/schemas/Tag"
-    Document_vendor:
+    DocumentVendor:
       type: object
       properties:
         address:
