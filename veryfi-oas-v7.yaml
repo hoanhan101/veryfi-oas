@@ -778,7 +778,8 @@ components:
           type: string
           example: "https://scdn.veryfi.com/receipts/470e7ab9-3084-4d05-b840-885383a2c22e/8247b18a-41f0-443c-bbf4-10814385e097.pdf?Expires=1628185188&Signature=OAaTOHH3KQYlj9pPA0fO50VjQSC8hnJJVvyJZwiGbK-wLw76UF5tWm0XtD5Htp2xx0vXbqJINIT7joyLA1dik01qDprgUbuXfcGamPUgJ6xcLOBKBF855bpFepK0Jdr-x9aGnx4EER7Z~CxUgvrv99cuFGuMab2s9gr0DwXHgLTCzVMZ2dOhbbvR8Yw8ADddzoOSPkwc~3PBB6AGla8cTQmSO0EWlq87rPaXWRrOnqnHwv5RqLWzVpODWVLeBYYudE2ZlaO~U7ftHzc0llKl3kffn4hElaDd5a7VoN0V9yKrGa1cCgRyYmFy9qtGsn3XPZutgnnzkB-~p6y0CUr7Zg__&Key-Pair-Id=APKAJCILBXEJFZF4DCHQ"
         insurance:
-          type: double
+          type: number
+          format: double
           example: 0.0
         invoice_number:
           type: string
