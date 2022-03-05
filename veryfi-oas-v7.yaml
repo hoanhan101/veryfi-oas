@@ -1215,9 +1215,10 @@ components:
     ClientId:
       type: apiKey
       name: CLIENT-ID
+      description: "Your Client ID"
       in: header
     Authorization:
       type: apiKey
-      description: "Example: apiKey $username:$apiKey"
+      description: "Your username and API Key in the following format -- apikey USERNAME:API_KEY"
       name: AUTHORIZATION
       in: header
