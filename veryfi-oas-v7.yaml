@@ -1219,6 +1219,6 @@ components:
       in: header
     Authorization:
       type: apiKey
-      description: "Your username and API Key in the following format -- apikey USERNAME:API_KEY"
+      description: "Your username and API Key in the following format: `apikey USERNAME:API_KEY`"
       name: AUTHORIZATION
       in: header
