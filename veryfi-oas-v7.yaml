@@ -135,7 +135,7 @@ paths:
               $ref: "#/components/schemas/DocumentUploadOptions"
       responses:
         "201":
-          description: Document.
+          description: Processed document response.
           content:
             application/json:
               schema:
@@ -151,13 +151,12 @@ paths:
       tags:
         - documents
       summary: Get a Document.
-      description: |
-        Retrieve a existing document by ID.
+      description: "Retrieve a previously processed document."
       operationId: getDocument
       parameters:
         - name: document_id
           in: path
-          description: ID of the document.
+          description: ID of a processed document.
           required: true
           style: simple
           explode: false
@@ -166,7 +165,7 @@ paths:
             format: int64
         - name: return_audit_trail
           in: query
-          description: ""
+          description: "Set to `1` to return the Audit Trail on this document. An audit trail includes information about changes made to this document and by who by date."
           required: false
           style: form
           explode: true
@@ -174,7 +173,7 @@ paths:
             type: string
       responses:
         "200":
-          description: Document.
+          description: Processed document response.
           content:
             application/json:
               schema:
@@ -898,7 +897,7 @@ components:
       properties:
         file_name:
           type: string
-          description: "Optional file name"
+          description: "Optional file name."
           example: "starbucks.jpg"
         file_data:
           type: string
