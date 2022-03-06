@@ -188,8 +188,7 @@ paths:
       tags:
         - documents
       summary: Update a Document.
-      description: |
-        Update data for a previously processed document, including almost any field like `vendor`, `date`, `notes` and etc.
+      description: "Update a previously processed document. Since Veryfi's Machine Learning models undergo frequent training, changes that are made to processed documents are used during these training sessions and eventually help improve the accuracy of data extraction."
       operationId: updateDocument
       parameters:
         - name: document_id
@@ -202,7 +201,7 @@ paths:
             type: integer
             format: int64
       requestBody:
-        $ref: "#/components/requestBodies/Document"
+        $ref: "#/components/requestBodies/DocumentUpdateOptions"
       responses:
         "200":
           description: Document.
@@ -953,6 +952,54 @@ components:
           type: integer
           description: "Switch to enable asynchronous processing mode. Default value is `0`. [Click here](https://hub.veryfi.com/api/docs/documents/process/#asynchronous) for more details."
           example: 0
+    DocumentUpdateOptions:
+      type: object
+      properties:
+        bill_to_name:
+          type: string
+          description: "Name of the Bill To contact"
+          example: "John Smith"
+        bill_to_address	:
+          type: string
+          description: "Address of the Bill To contact"
+          example: "400 Concar Dr, Suite 04-155, San Mateo, CA 94402"
+        category:
+          type: string
+          description: "Category for the document"
+          example: "Software"
+        date:
+          type: string
+          description: "Date on invoice/bill/receipt in YYYY-MM-DD HH:MM:SS format"
+          example: "2022-03-03 16:26:48"
+        due_date:
+          type: string
+          description: "Date on invoice/bill/receipt in YYYY-MM-DD HH:MM:SS format"
+          example: "2022-03-03 16:26:48"
+        invoice_number:
+          type: string
+          description: "Invoice number"
+        subtotal:
+          type: number
+          format: float
+          description: "Subtotal on the document"
+        tax:
+          type: number
+          format: float
+          description: "Tax on the document"
+        tip:
+          type: number
+          format: float
+          description: "Tip/gratuity on the document"
+        total:
+          type: number
+          format: float
+          description: "Total on the document"
+        vendor:
+          type: object
+          description: "Vendor details"
+        external_id:
+          type: string
+          description: "Optional custom document identifier. Use this if you would like to assign your own ID to documents"
     OperationStatus:
       type: object
       properties:
@@ -1170,7 +1217,7 @@ components:
         type: string
   requestBodies:
     DocumentUploadOptions:
-      description: Processing Settings.
+      description: Document upload options.
       content:
         application/json:
           schema:
@@ -1178,6 +1225,13 @@ components:
         multipart/form-data:
           schema:
             $ref: "#/components/schemas/DocumentUploadOptions"
+      required: true
+    DocumentUpdateOptions:
+      description: Document update options.
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/DocumentUpdateOptions"
       required: true
     Document:
       description: Document.
