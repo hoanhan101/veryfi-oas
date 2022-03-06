@@ -156,7 +156,7 @@ paths:
       parameters:
         - name: document_id
           in: path
-          description: ID of a processed document.
+          description: ID of the document.
           required: true
           style: simple
           explode: false
@@ -220,8 +220,7 @@ paths:
       tags:
         - documents
       summary: Delete a Document.
-      description: |
-        Delete an existing document by ID.
+      description: "Delete a processed document from Veryfi."
       operationId: deleteDocument
       parameters:
         - name: document_id
@@ -245,8 +244,7 @@ paths:
       tags:
         - line-items
       summary: Get Line Items.
-      description: |
-        Retrieve all line items for a specific document.
+      description: "Retrieve all line items for a document."
       operationId: getLineItems
       parameters:
         - name: document_id
