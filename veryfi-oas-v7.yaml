@@ -123,10 +123,17 @@ paths:
       operationId: processDocument
       requestBody:
         content:
-          application/octet-stream:
+          # application/octet-stream:
+          #   schema:
+          #     type: string
+          #     format: binary
+          multipart/form-data:
             schema:
-              type: string
-              format: binary
+              type: object
+              properties:
+                fileName:
+                  type: string
+                  format: binary
           application/json:
             schema:
               $ref: "#/components/requestBodies/DocumentUploadOptions"
