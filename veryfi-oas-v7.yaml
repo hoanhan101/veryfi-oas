@@ -123,10 +123,6 @@ paths:
       operationId: processDocument
       requestBody:
         content:
-          # application/octet-stream:
-          #   schema:
-          #     type: string
-          #     format: binary
           multipart/form-data:
             schema:
               type: object
@@ -136,7 +132,7 @@ paths:
                   format: binary
           application/json:
             schema:
-              $ref: "#/components/requestBodies/DocumentUploadOptions"
+              $ref: "#/components/schemas/DocumentUploadOptions"
       responses:
         "201":
           description: Document.
