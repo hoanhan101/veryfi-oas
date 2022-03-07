@@ -444,269 +444,344 @@ components:
         base:
           type: number
           format: double
+          description: "Tax Base"
           example: 1.11
         name:
           type: string
+          description: "Tax Name"
           example: "SALES"
-        order:
-          type: integer
-          example: 0
         rate:
           type: number
           format: double
+          description: "Tax Rate %"
           example: 1.11
         total:
           type: number
           format: double
+          description: "Tax Total"
           example: 2.22
     LineItem:
       type: object
       properties:
         date:
           type: string
+          description: "Date"
           example: ""
         description:
           type: string
+          description: "Description"
           example: "98 Meat Pty Xchz"
         discount:
           type: number
           format: double
+          description: "Discount"
           example: 0.0
         discount_rate:
           type: number
           format: double
+          description: "Discount Rate"
           example: 0.0
         id:
           type: integer
           format: int64
+          description: "ID"
           example: 75788890
         order:
           type: integer
+          description: "Order"
           example: 1
         price:
           type: number
           format: double
+          description: "Price"
           example: 12.5
         quantity:
           type: number
           format: double
+          description: "Quantity"
           example: 1
         reference:
           type: string
+          description: "Reference Number"
           example: ""
         section:
           type: string
+          description: "Section"
           example: ""
         sku:
           type: string
+          description: "Stock Keeping Unit (SKU)"
           example: "038902058959"
         tax:
           type: number
           format: double
+          description: "Tax"
           example: 7.66
         tax_rate:
           type: number
           format: double
+          description: "Tax Rate"
           example: 7.66
         text:
           type: string
+          description: "Text"
           example: "GINGER CARROT SOUP"
         total:
           type: number
           format: double
+          description: "Total"
           example: 88.2
         type:
           type: string
+          description: "Type"
           example: food
         unit_of_measure:
           type: string
+          description: "Unit Of Measure"
           example: ""
     Document:
       type: object
       properties:
         abn_number:
           type: string
+          description: "ABN Number (Australian Business Number)"
           example: ""
         account_number:
           type: string
+          description: "Account Number"
           example: ""
         bill_to_address:
           type: string
+          description: "Bill To Address"
           example: "2 Court Square\nNew York, NY 12210"
         bill_to_name:
           type: string
+          description: "Bill To Name"
           example: "John Smith"
         bill_to_vat_number:
           type: string
+          description: "Bill To VAT Number"
           example: ""
         card_number:
           type: string
+          description: "Card Number"
           example: "7373"
         cashback:
           type: number
           format: double
+          description: "Cashback"
           example: 7.66
         category:
           type: string
+          description: "Category"
           example: "Meals & Entertainment"
         created:
           type: string
+          description: "Created Date"
           example: "2021-08-05 17:24:48"
         currency_code:
           type: string
+          description: "Currency Code"
           example: "USD"
         date:
           type: string
+          description: "Date"
           example: "2021-08-05 10:24:48"
         delivery_date:
           type: string
+          description: "Delivery Date"
           example: ""
         discount:
           type: number
           format: double
+          description: "Discount"
           example: 7.66
         document_reference_number:
           type: string
+          description: "Document Reference Number"
           example: ""
         document_title:
           type: string
+          description: "Document Title"
           example: INVOICE
         document_type:
           type: string
+          description: "Document Type"
           example: "invoice"
         due_date:
           type: string
+          description: "Due Date"
           example: ""
         duplicate_of:
           type: string
+          description: "Duplicated Document ID"
           example: ""
         external_id:
           type: string
+          description: "External ID"
           example: ""
         id:
           type: integer
+          description: "Document ID"
           example: ""
         img_file_name:
           type: string
+          description: "Image File Name"
           example: "8247b18a-41f0-443c-bbf4-10814385e097.pdf"
         img_thumbnail_url:
           type: string
+          description: "Image Thumbnail URL"
           example: "https://scdn.veryfi.com/receipts/470e7ab9-3084-4d05-b840-885383a2c22e/thumbnail.jpg?Expires=1628185188&Signature=cnyZCF~GnF2TkizYWObnGuNDhmkCsRl5-XoVymoalJFjJCrQKmq7RbpS6RCUnt60aVlPiT1uJeQJXG4eyZOg~FfJc5-ieC0gkqAFhh9vCRjzph15niTfq0mKg23nOu3YR8BJcWBfPfEL8k3FEqFERsvUBNddvfCkfx9JoMlq9ATNBQLxkK4lJPF4vMcFpkiCStOEt0MDJM80NbgPAqZEAQuDzygaiy8owaGiOVIj0h0ZMzLHNPzf5flGYqK6D2LvGRZlEIESavULk1Eug7tuG1DiqxTaDDxDbBGUCDb9ZIaKQAsPXzoEHUExB3J61q-B5KTFJSNch1okMe6sT9fzpQ__&Key-Pair-Id=APKAJCILBXEJFZF4DCHQ"
         img_url:
           type: string
+          description: "Image URL"
           example: "https://scdn.veryfi.com/receipts/470e7ab9-3084-4d05-b840-885383a2c22e/8247b18a-41f0-443c-bbf4-10814385e097.pdf?Expires=1628185188&Signature=OAaTOHH3KQYlj9pPA0fO50VjQSC8hnJJVvyJZwiGbK-wLw76UF5tWm0XtD5Htp2xx0vXbqJINIT7joyLA1dik01qDprgUbuXfcGamPUgJ6xcLOBKBF855bpFepK0Jdr-x9aGnx4EER7Z~CxUgvrv99cuFGuMab2s9gr0DwXHgLTCzVMZ2dOhbbvR8Yw8ADddzoOSPkwc~3PBB6AGla8cTQmSO0EWlq87rPaXWRrOnqnHwv5RqLWzVpODWVLeBYYudE2ZlaO~U7ftHzc0llKl3kffn4hElaDd5a7VoN0V9yKrGa1cCgRyYmFy9qtGsn3XPZutgnnzkB-~p6y0CUr7Zg__&Key-Pair-Id=APKAJCILBXEJFZF4DCHQ"
         insurance:
           type: number
           format: double
+          description: "Insurance"
           example: 0.0
         invoice_number:
           type: string
+          description: "Invoice Number"
           example: ""
         is_duplicate:
           type: integer
+          description: "Is Duplicated"
           example: 0
         line_items:
           type: array
+          description: "List Of Line Items"
           items:
             $ref: "#/components/schemas/LineItem"
         notes:
           type: string
+          description: "Notes"
           example: ""
         ocr_text:
           type: string
+          description: "OCR Text"
           example: '2004-10-31\n\t8:21 PM\nYOUR GUEST NUMBER IS\n98\nIN-N-OUT BURGER LAS VEGAS EASTERN\n2004-10-31\t\t8:21 PM\n165 1 5 98\nCashier: SAM\nGUEST #: 98\nCounter-Eat in\n\t2.65\nDbDb\t\t88.20\n98 Meat Pty Xchz\n\t90.85\nCounter-Eat In\t\t6.81\nTAX 7.50%\t\t97.66\nAmount Due\n\t$97.66\nCASH TENDER\t\t$.00\nChange\n2004-10-31\t\t8:21 PM\nTHANK YOU!'
         order_date:
           type: string
+          description: "Order Date"
           example: ""
         payment_display_name:
           type: string
+          description: "Payment Display Name"
           example: "Visa"
         payment_terms:
           type: string
+          description: "Payment Terms"
           example: "15 days"
         payment_type:
           type: string
+          description: "Payment Type"
           example: "visa"
         phone_number:
           type: string
+          description: "Phone Number"
           example: "61784074851"
         purchase_order_number:
           type: string
+          description: "Purchase Order Number"
           example: "2312/2019"
         rounding:
           type: number
+          description: "Rounding Number"
           format: double
           example: 0.0
         service_end_date:
           type: string
+          description: "Service End Date"
           example: ""
         service_start_date:
           type: string
+          description: "Service Start Date"
           example: ""
         ship_date:
           type: string
+          description: "Shipping Date"
           example: ""
         ship_to_address:
           type: string
+          description: "Shipping Address"
           example: "3787 Pineview Drive\nCambridge, MA 12210"
         ship_to_name:
           type: string
+          description: "Shipping Recipient"
           example: "John Smith"
         shipping:
           type: number
+          description: "Shipping"
           format: double
           example: 0.0
         store_number:
           type: string
+          description: "Store Number"
           example: ""
         subtotal:
           type: number
           format: double
+          description: "Subtotal"
           example: 97.66
         tax:
           type: number
           format: double
+          description: "Tax"
           example: 12.5
         tax_lines:
           type: array
+          description: "Tax Lines Breakdown"
           items:
             $ref: "#/components/schemas/TaxLine"
         tip:
           type: number
           format: double
+          description: "Tip"
           example: 12.5
         total:
           type: number
           format: double
+          description: "Total"
           example: 97.66
         total_weight:
           type: string
+          description: "Total Weight"
           example: ""
         tracking_number:
           type: string
+          description: "Tracking Number"
           example: ""
         updated:
           type: string
+          description: "Updated Date"
           example: "2021-08-05 17:24:48"
         vat_number:
           type: string
+          description: "VAT Number"
           example: ""
         vendor:
           $ref: "#/components/schemas/DocumentVendor"
         vendor_account_number:
           type: string
+          description: "Vendor Account Number"
           example: ""
         vendor_bank_name:
           type: string
+          description: "Vendor Bank Name"
           example: ""
         vendor_bank_number:
           type: string
+          description: "Vendor Bank Number"
           example: ""
         vendor_bank_swift:
           type: string
+          description: "Vendor Bank Swift"
           example: ""
         vendor_iban:
           type: string
+          description: "International Bank Account Number (IBAN)"
           example: ""
     DocumentUploadOptions:
       type: object
@@ -842,36 +917,47 @@ components:
       properties:
         address:
           type: string
+          description: "Vendor Address"
           example: "1912 Harvest Lane\nNew York, NY 12210"
         category:
           type: string
+          description: "Vendor Category"
           example: "Fast Food"
         email:
           type: string
+          description: "Vendor Email"
           example: ""
         fax_number:
           type: string
+          description: "Vendor Fax Number"
           example: ""
         name:
           type: string
+          description: "Vendor Name"
           example: "In-n-out Burger"
         phone_number:
           type: string
+          description: "Vendor Phone Number"
           example: "165 1 5 98"
         raw_name:
           type: string
+          description: "Vendor Raw Name"
           example: "In-N-Out Burger"
         vendor_logo:
           type: string
+          description: "Vendor Logo"
           example: "https://cdn.veryfi.com/logos/us/949103001.png"
         vendor_reg_number:
           type: string
+          description: "Vendor Registration Number"
           example: ""
         vendor_type:
           type: string
+          description: "Vendor Type"
           example: "Fast Food"
         web:
           type: string
+          description: "Vendor Web"
           example: ""
   responses:
     Documents:
