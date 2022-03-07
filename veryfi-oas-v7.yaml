@@ -12,6 +12,7 @@ info:
   version: v7
 servers:
   - url: https://api.veryfi.com/api/v7/partner
+  - url: https://devapi.veryfi.com/api/v7/partner
 security:
   - ClientId: []
     Authorization: []
