@@ -1115,11 +1115,11 @@ components:
   securitySchemes:
     ClientId:
       type: apiKey
-      name: CLIENT-ID
-      description: "Your Client ID"
+      name: CLIENT ID
+      description: "Client ID identifies which client is making the requests to Veryfi API. Your Client ID is located in the [Keys](https://hub.veryfi.com/api/settings/keys/) section."
       in: header
     Authorization:
       type: apiKey
-      description: "Your username and API Key in the following format: `apikey USERNAME:API_KEY`"
+      description: "Your Username and API Key makes up an authorization key with the following format: `apikey USERNAME:API_KEY`. You can also find them in the [Keys](https://hub.veryfi.com/api/settings/keys/) section."
       name: AUTHORIZATION
       in: header
