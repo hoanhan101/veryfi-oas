@@ -1502,7 +1502,7 @@
     "securitySchemes": {
       "ClientId": {
         "type": "apiKey",
-        "name": "CLIENT ID",
+        "name": "CLIENT-ID",
         "description": "Client ID identifies which client is making the requests to Veryfi API. Your Client ID is located in the [Keys](https://hub.veryfi.com/api/settings/keys/) section.",
         "in": "header"
       },
